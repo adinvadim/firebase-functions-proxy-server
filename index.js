@@ -7,7 +7,7 @@ const selectHost = (req) => {
 };
 
 app.use(
-  '/functions/:region/:projectId',
+  '/functions/us-central/ole-ole-220811',
   proxy(selectHost, {
     https: true,
   })

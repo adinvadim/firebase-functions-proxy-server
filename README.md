@@ -10,10 +10,12 @@
 
 It is simple proxy server.
 
-`/functions/:region/:projectId` -> `https://${region}-${projectId}.cloudfunctions.net`
+`/functions/:region/:projectId/example-function-name` -> `https://${region}-${projectId}.cloudfunctions.net/example-function-name`
 
 Example:
 
 `europe-west1` and `example`
 
-`/functions/europe-west1/example` -> `https://europe-west-1-example.cloudfunctions.net`
+`/functions/europe-west1/example/example-function-name` -> `https://europe-west-1-example.cloudfunctions.net/example-function-name`
+
+Also support query and many levels in paths (`/example-function-name/sub-path/another-path`)

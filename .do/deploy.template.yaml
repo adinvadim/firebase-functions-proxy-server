@@ -1,0 +1,7 @@
+spec:
+ name: firebase-functions-proxy
+ services:
+ - name: web
+   git:
+     branch: master
+     repo_clone_url: https://github.com/adinvadim/firebase-functions-proxy-server.git

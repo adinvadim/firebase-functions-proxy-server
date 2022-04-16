@@ -1,0 +1,7 @@
+{
+  "name": "Firebase Functions Proxy server",
+  "description": "Simple proxy server for firebase functions",
+  "repository": "https://github.com/adinvadim/firebase-functions-proxy-server",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "functions", "firebase", "proxy"]
+}

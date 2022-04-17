@@ -34,3 +34,30 @@ db.settings({
   ssl: true
 })
 ```
+
+
+## Proxy auth
+
+Add webpack plugins:
+```
+{
+  enforce: 'pre',
+  test: /\.js$/,
+  loader: 'string-replace-loader',
+  options: {
+    search: 'www.googleapis.com',
+    replace: 'your-domain.com/auth',
+    flags: 'g',
+  },
+},
+{
+  enforce: 'pre',
+  test: /\.js$/,
+  loader: 'string-replace-loader',
+  options: {
+    search: 'securetoken.googleapis.com',
+    replace: 'your-domain.com/securetoken',
+    flags: 'g',
+  },
+},
+```

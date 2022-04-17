@@ -13,6 +13,11 @@ app.use(
   })
 );
 
+app.use(
+  '/firestore/',
+  proxy('https://firestore.googleapis.com', { https: true })
+);
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });

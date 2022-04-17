@@ -8,6 +8,8 @@
 
 # How it work
 
+## Proxy functions
+
 It is simple proxy server.
 
 `/functions/:region/:projectId/example-function-name` -> `https://${region}-${projectId}.cloudfunctions.net/example-function-name`
@@ -19,3 +21,16 @@ Example:
 `/functions/europe-west1/example/example-function-name` -> `https://europe-west-1-example.cloudfunctions.net/example-function-name`
 
 Also support query and many levels in paths (`/example-function-name/sub-path/another-path`)
+
+
+## Proxy firestore
+
+Connect domain to your proxy server and set settings:
+
+```
+const db = firebase.firestore();
+db.settings({
+  host: 'your-domain.com/firestore',
+  ssl: true
+})
+```

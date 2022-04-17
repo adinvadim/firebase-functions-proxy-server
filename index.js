@@ -18,6 +18,13 @@ app.use(
   proxy('https://firestore.googleapis.com', { https: true })
 );
 
+app.use(
+  '/securetoken/',
+  proxy('https://securetoken.googleapis.com/', { https: true })
+);
+
+app.use('/auth/', proxy('www.googleapis.com', { https: true }));
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });

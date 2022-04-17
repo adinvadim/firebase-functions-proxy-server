@@ -25,8 +25,9 @@ Also support query and many levels in paths (`/example-function-name/sub-path/an
 
 ## Proxy firestore
 
-Connect domain to your proxy server and set settings:
+Connect domain to your proxy server and set domain in firestore settings.
 
+Example with proxy server on domain `your-domain.com`:
 ```
 const db = firebase.firestore();
 db.settings({
@@ -37,8 +38,12 @@ db.settings({
 
 
 ## Proxy auth
+You need replace `www.googleapis.com` and `securetoken.googleapis.com` with
+proxy urls.
 
-Add webpack plugins:
+One of possible for it is webpack plugins.
+
+Example with proxy server on domain `your-domain.com`:
 ```
 {
   enforce: 'pre',

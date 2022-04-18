@@ -7,7 +7,7 @@ const selectHost = (req) => {
 };
 
 app.use(
-  '/functions/:region/:projectId',
+  '/functions/:projectId/:region',
   proxy(selectHost, {
     https: true,
   })
